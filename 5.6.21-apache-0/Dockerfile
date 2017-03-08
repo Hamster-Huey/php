@@ -6,6 +6,8 @@ COPY init_container.sh /bin/
 
 RUN a2enmod rewrite expires
 
+ENV LOG_OUTPUT /var/log/apache/access.log
+
 # install the PHP extensions we need
 RUN apt-get update \ 
     && apt-get install -y libpng12-dev \
