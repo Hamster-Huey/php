@@ -6,7 +6,7 @@ COPY init_container.sh /bin/
 
 RUN a2enmod rewrite expires
 
-ENV LOG_OUTPUT /var/log/apache/access.log
+ENV LOG_OUTPUT /var/log/apache2/access.log
 
 # install the PHP extensions we need
 RUN apt-get update \ 
